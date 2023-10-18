@@ -1,0 +1,1069 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="python" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>src.master &#8212; LoRa  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/src/master/index';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="src.mqtt" href="../mqtt/index.html" />
+    <link rel="prev" title="src" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="python"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">LoRa  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.master</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mqtt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.mqtt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mqtt_master/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.mqtt_master</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../portID/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.portID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../receiver/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.receiver</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../scratch/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.scratch</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../slave/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.slave</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../slavev2/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.slavev2</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../add_batch_num/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">add_batch_num</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">graph</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../calc_batch/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">calc_batch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../permutations/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">permutations</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">setup</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../myLibs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/Buffers/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Buffers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/Communications/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Communications</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/Debug/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Debug</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/Mqtt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Mqtt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/Numato32/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Numato32</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/RN2483/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.RN2483</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/RN2903/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.RN2903</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../myLibs/RYLR998/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.RYLR998</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../master/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">master</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../portID/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">portID</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RYLR998_sender/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">RYLR998_sender</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RYLR998_receiver/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">RYLR998_receiver</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/autoapi/src/master/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>src.master</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.stop_program"><code class="docutils literal notranslate"><span class="pre">stop_program</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.mqtt_message"><code class="docutils literal notranslate"><span class="pre">mqtt_message</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.mqtt_topic"><code class="docutils literal notranslate"><span class="pre">mqtt_topic</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.create_obj"><code class="docutils literal notranslate"><span class="pre">create_obj()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.send_config"><code class="docutils literal notranslate"><span class="pre">send_config()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.find_os"><code class="docutils literal notranslate"><span class="pre">find_os()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.radio_setup"><code class="docutils literal notranslate"><span class="pre">radio_setup()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.send_data"><code class="docutils literal notranslate"><span class="pre">send_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.callback"><code class="docutils literal notranslate"><span class="pre">callback()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.input_thread"><code class="docutils literal notranslate"><span class="pre">input_thread()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.on_connect"><code class="docutils literal notranslate"><span class="pre">on_connect()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.on_disconnect"><code class="docutils literal notranslate"><span class="pre">on_disconnect()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.on_message"><code class="docutils literal notranslate"><span class="pre">on_message()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.start_loop_thread"><code class="docutils literal notranslate"><span class="pre">start_loop_thread()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.check_message"><code class="docutils literal notranslate"><span class="pre">check_message()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.test_all_configurations"><code class="docutils literal notranslate"><span class="pre">test_all_configurations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.test_race_horse"><code class="docutils literal notranslate"><span class="pre">test_race_horse()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.test_manual"><code class="docutils literal notranslate"><span class="pre">test_manual()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.get_line_as_dict"><code class="docutils literal notranslate"><span class="pre">get_line_as_dict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-src.master">
+<span id="src-master"></span><h1><a class="reference internal" href="#module-src.master" title="src.master"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.master</span></code></a><a class="headerlink" href="#module-src.master" title="Permalink to this heading">#</a></h1>
+<p>&#64;package docstring
+Documentation for this module.</p>
+<p>More details.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.create_obj" title="src.master.create_obj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_obj</span></code></a>()</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.send_config" title="src.master.send_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">send_config</span></code></a>(obj, config_line)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.find_os" title="src.master.find_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_os</span></code></a>()</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.radio_setup" title="src.master.radio_setup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radio_setup</span></code></a>(obj, callback, settings)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.send_data" title="src.master.send_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">send_data</span></code></a>(obj, config, config_line)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.callback" title="src.master.callback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callback</span></code></a>(message)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.input_thread" title="src.master.input_thread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">input_thread</span></code></a>()</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.on_connect" title="src.master.on_connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_connect</span></code></a>(client, userData, flags, rc)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.on_disconnect" title="src.master.on_disconnect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_disconnect</span></code></a>(client, userData, rc)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.on_message" title="src.master.on_message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_message</span></code></a>(client, userData, message)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.start_loop_thread" title="src.master.start_loop_thread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_loop_thread</span></code></a>(obj)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.check_message" title="src.master.check_message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_message</span></code></a>(message, topic)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.test_all_configurations" title="src.master.test_all_configurations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_all_configurations</span></code></a>(test_file, mqtt_master, ...)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.test_race_horse" title="src.master.test_race_horse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_race_horse</span></code></a>(test_file, mqtt_master, radio_rn2903)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.test_manual" title="src.master.test_manual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_manual</span></code></a>(test_file, mqtt_master, radio_rn2903)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.get_line_as_dict" title="src.master.get_line_as_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_line_as_dict</span></code></a>(csv_file, line_number)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.run" title="src.master.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(mqtt_master, radio_rn2903, test_file)</p></td>
+<td><p>Args:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.main" title="src.master.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h3>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.stop_program" title="src.master.stop_program"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_program</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.master.mqtt_message" title="src.master.mqtt_message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mqtt_message</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.master.mqtt_topic" title="src.master.mqtt_topic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mqtt_topic</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="src.master.stop_program">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">stop_program</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#src.master.stop_program" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.master.mqtt_message">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">mqtt_message</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#src.master.mqtt_message" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.master.mqtt_topic">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">mqtt_topic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#src.master.mqtt_topic" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.create_obj">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">create_obj</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.master.create_obj" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>None</p></li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>Creates he RN2903 object required for using the LoRa device</p></li>
+<li><p>returns the radio object</p></li>
+<li><p>sets the EUI for the LoRa Module as well</p></li>
+</ul>
+</dd>
+<dt>Future additions:</dt><dd><ul class="simple">
+<li><p>be able to use other LoRa Module devices</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.send_config">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">send_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.send_config" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>obj</dt><dd><ul>
+<li><p>type: object</p></li>
+<li><p>purpose: be able to use the RN2903 object</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>config_line</dt><dd><ul>
+<li><p>type: dict</p></li>
+<li><p>prupose: containts the different LoRa configurations</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>sends the configurations to the device</p></li>
+<li><p>returns True or False if successfull or not</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.find_os">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">find_os</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.master.find_os" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>None</p></li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>detects the operating system you are using (currently windows, linux, and mac)</p></li>
+<li><p>lets you choose the serial COM port based on your operating system</p></li>
+<li><p>returns the port you are wanting to use</p></li>
+</ul>
+</dd>
+<dt>Future additions:</dt><dd><ul class="simple">
+<li><p>automate the port detection to eliminate user input error</p></li>
+<li><p>add other operating systems besides windows, mac, and linux</p></li>
+<li><p>only been tested on linux and windows</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.radio_setup">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">radio_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.radio_setup" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>obj</dt><dd><ul>
+<li><p>type: object</p></li>
+<li><p>purpose: is the LoRa Module object</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>callback</dt><dd><ul>
+<li><p>type: function</p></li>
+<li><p>purpose: function that prints out received information over LoRa</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>settings:</dt><dd><ul>
+<li><p>type: nested dictionary (2 layers)dd</p></li>
+<li><p>purpose: containt the Communications and Buffer classes settings</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>opens the port and starts the threads in the Communications.py class</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.send_data">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">send_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.send_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>obj</dt><dd><ul>
+<li><p>type: obj</p></li>
+<li><p>purpose: is the Lora Module object</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>config</dt><dd><ul>
+<li><p>type: dict</p></li>
+<li><p>purpose: is the configuration to be sent to the module</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>config line</dt><dd><ul>
+<li><p>type: int</p></li>
+<li><p>purpose: is the data that we are sending over LoRa</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>loads a specified configuration to the LoRa Module</p></li>
+<li><p>sends a message using that configuration. In this specific example it is sending the line number of our test file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.callback">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.callback" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>message</dt><dd><ul>
+<li><p>type: hex</p></li>
+<li><p>purpose: containts the infomration from the received LoRa message</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>decodes the custom header built by Carlos</p></li>
+<li><p>outputs the information received to the terminal</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.input_thread">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">input_thread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.master.input_thread" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>None</p></li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>stops the program when the user presses a key on the screen</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.on_connect">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">on_connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.on_connect" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>client</dt><dd><ul>
+<li><p>type: class 'paho.mqtt.client.Client'</p></li>
+<li><p>purpose: contains information about the mqtt client in our program</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>userData</dt><dd><ul>
+<li><p>type: class 'NoneType', can be any type</p></li>
+<li><p>purpose: user data paramet passed to the callbacks</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Flags</dt><dd><ul>
+<li><p>type: class 'dict'</p></li>
+<li><p>purpose: response flags sent by the broker</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>rc</dt><dd><ul>
+<li><p>type: class 'int'</p></li>
+<li><dl class="simple">
+<dt>purpose: the connection result,</dt><dd><p>0: Connection successful
+1: Connection refused - incorrect protocol version
+2: Connection refused - invalid client identifier
+3: Connection refused - server unavailable
+4: Connection refused - bad username or password
+5: Connection refused - not authorised
+6-255: Currently unused.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>Callback to the on_connect function within the PAHO mqtt class</p></li>
+<li><p>prints out the client details upon connecting to the mqtt broker</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.on_disconnect">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">on_disconnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.on_disconnect" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>client</dt><dd><ul>
+<li><p>type: class 'paho.mqtt.client.Client'</p></li>
+<li><p>purpose: contains information about the mqtt client in our program</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>userData</dt><dd><ul>
+<li><p>type: class 'NoneType', can be any type</p></li>
+<li><p>purpose: user data paramet passed to the callbacks</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>rc</dt><dd><ul>
+<li><p>type: class 'int'</p></li>
+<li><dl class="simple">
+<dt>purpose: the connection result,</dt><dd><p>0: disconnection was successful
+1-255: unexpected disconnect</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>Callback to the on_disconnect function in the PAHO mqtt class</p></li>
+<li><p>prints information when the client disconnects from the mqtt broker</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.on_message">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">on_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.on_message" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>client</dt><dd><ul>
+<li><p>type: class 'paho.mqtt.client.Client'</p></li>
+<li><p>purpose: contains information about the mqtt client in our program</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>userData</dt><dd><ul>
+<li><p>type: class 'NoneType', can be any type</p></li>
+<li><p>purpose: user data paramet passed to the callbacks</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>message</dt><dd><ul>
+<li><p>type: class 'paho.mqtt.client.MQTTMessage'</p></li>
+<li><p>purpose: the incoming message through mqtt</p></li>
+<li><p>usage: use message.payload.decode() to decode the message to a str</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>displays the message</p></li>
+<li><p>returns mqtt_message as a global variable for the rest of the program to access</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.start_loop_thread">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">start_loop_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.start_loop_thread" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>obj</dt><dd><ul>
+<li><p>type: object</p></li>
+<li><p>purpose: able to access the functions in the mqtt class</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>starts the loop for the MQTT class</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.check_message">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">check_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.check_message" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>message</dt><dd><ul>
+<li><p>type: str</p></li>
+<li><p>purpose: containts the information we pass in message</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>topic</dt><dd><ul>
+<li><p>type: str</p></li>
+<li><p>purpose: containts the information we pass in topic</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>we use this function in the message callback to determine what topic we received the message from</p></li>
+<li><p>different settings are encoded depending on the topic</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.test_all_configurations">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">test_all_configurations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mqtt_master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radio_rn2903</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.test_all_configurations" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>test_file</dt><dd><ul>
+<li><p>type: string</p></li>
+<li><p>purpose: embeds the csv file</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>mqtt_master</dt><dd><ul>
+<li><p>type: object</p></li>
+<li><p>purpose: allows for the usage of the Mqtt class</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>radio_rn2903</dt><dd><ul>
+<li><p>type: object</p></li>
+<li><p>purpose: allows for the usage of the RN2903_Radio class</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>Tests all the configurations possible</p></li>
+<li><p>Use MQTT conformation to send new batches</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.test_race_horse">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">test_race_horse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mqtt_master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radio_rn2903</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.test_race_horse" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.test_manual">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">test_manual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mqtt_master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radio_rn2903</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.test_manual" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.get_line_as_dict">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">get_line_as_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csv_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.get_line_as_dict" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.run">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mqtt_master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radio_rn2903</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.master.run" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>mqtt_master</dt><dd><ul>
+<li><p>type: object</p></li>
+<li><p>purpose: gives us access to the mqtt class</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>radio_rn2903,</dt><dd><ul>
+<li><p>type: object</p></li>
+<li><p>purpose: gives access to the Radio RN2903 class</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>test_file</dt><dd><ul>
+<li><p>type: str</p></li>
+<li><p>purpose: containts the information for the location of the test file. CSV format</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Purpose:</dt><dd><ul class="simple">
+<li><p>opens the csv file</p></li>
+<li><dl class="simple">
+<dt>has 5 modes</dt><dd><ul>
+<li><p>mode all: tests all the possible configurations</p></li>
+<li><p>mode test: tests the 72 batch configurations (this is to be updated to make the race horse algorithim faster)</p></li>
+<li><p>mode manual: specify a batch number or config number to your liking</p></li>
+<li><p>mode reset: restarts the menu and you can executre all, test, or manual</p></li>
+<li><p>mode stop: stops the run function and exits</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.master.main">
+<span class="sig-prename descclassname"><span class="pre">src.master.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.master.main" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../mqtt/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.mqtt</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.stop_program"><code class="docutils literal notranslate"><span class="pre">stop_program</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.mqtt_message"><code class="docutils literal notranslate"><span class="pre">mqtt_message</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.mqtt_topic"><code class="docutils literal notranslate"><span class="pre">mqtt_topic</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.create_obj"><code class="docutils literal notranslate"><span class="pre">create_obj()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.send_config"><code class="docutils literal notranslate"><span class="pre">send_config()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.find_os"><code class="docutils literal notranslate"><span class="pre">find_os()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.radio_setup"><code class="docutils literal notranslate"><span class="pre">radio_setup()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.send_data"><code class="docutils literal notranslate"><span class="pre">send_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.callback"><code class="docutils literal notranslate"><span class="pre">callback()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.input_thread"><code class="docutils literal notranslate"><span class="pre">input_thread()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.on_connect"><code class="docutils literal notranslate"><span class="pre">on_connect()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.on_disconnect"><code class="docutils literal notranslate"><span class="pre">on_disconnect()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.on_message"><code class="docutils literal notranslate"><span class="pre">on_message()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.start_loop_thread"><code class="docutils literal notranslate"><span class="pre">start_loop_thread()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.check_message"><code class="docutils literal notranslate"><span class="pre">check_message()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.test_all_configurations"><code class="docutils literal notranslate"><span class="pre">test_all_configurations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.test_race_horse"><code class="docutils literal notranslate"><span class="pre">test_race_horse()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.test_manual"><code class="docutils literal notranslate"><span class="pre">test_manual()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.get_line_as_dict"><code class="docutils literal notranslate"><span class="pre">get_line_as_dict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#src.master.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Thomas Kidd & Hunter Green
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Thomas Kidd &amp; Hunter Green.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

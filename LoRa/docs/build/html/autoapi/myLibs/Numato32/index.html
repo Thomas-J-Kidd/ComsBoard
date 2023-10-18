@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="python" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>myLibs.Numato32 &#8212; LoRa  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/myLibs/Numato32/index';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="myLibs.RN2483" href="../RN2483/index.html" />
+    <link rel="prev" title="myLibs.Mqtt" href="../Mqtt/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="python"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">LoRa  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../master/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">master</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../add_batch_num/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">add_batch_num</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">graph</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../calc_batch/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">calc_batch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../permutations/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">permutations</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">setup</span></code></a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Buffers/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Buffers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Communications/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Communications</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Debug/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Debug</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Mqtt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Mqtt</span></code></a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Numato32</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RN2483/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.RN2483</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RN2903/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.RN2903</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RYLR998/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.RYLR998</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../portID/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">portID</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RYLR998_sender/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">RYLR998_sender</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RYLR998_receiver/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">RYLR998_receiver</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/autoapi/myLibs/Numato32/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>myLibs.Numato32</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._GPIO_MAX_NUMERIC"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._GPIO_MAX_NUMERIC</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._GPIO_MIN"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._GPIO_MIN</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._GPIO_MAX"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._GPIO_MAX</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._ADC_MIN"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._ADC_MIN</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._ADC_MAX"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._ADC_MAX</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.__del__"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.__del__()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._class_print"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._class_print()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._sendCommand"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._sendCommand()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._validateGpio"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._validateGpio()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._convertGPIO"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._convertGPIO()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._calculateMask"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._calculateMask()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._calculateDirectionMaks"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._calculateDirectionMaks()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.setGpioDirection"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.setGpioDirection()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.writeGpio"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.writeGpio()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.readGpio"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.readGpio()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._validateAnalog"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._validateAnalog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.readAnalog"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.readAnalog()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-myLibs.Numato32">
+<span id="mylibs-numato32"></span><h1><a class="reference internal" href="#module-myLibs.Numato32" title="myLibs.Numato32"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Numato32</span></code></a><a class="headerlink" href="#module-myLibs.Numato32" title="Permalink to this heading">#</a></h1>
+<p>NumatoGPIO - A Python library for controlling Numato Lab GPIO and Analog Input/Output devices over serial.
+Author: Carlos Finocchiaro
+Date: 4/30/2023
+License: MIT
+Description: This library provides functions for controlling Numato Lab GPIO and Analog Input/Output devices over serial.
+It supports setting the direction and reading/writing values to individual GPIO pins, as well as reading values from analog input channels.
+Usage:</p>
+<blockquote>
+<div><p>1. Instantiate the NumatoGPIO class with the serial port and optional baudrate and timeout:
+gpio = NumatoGPIO('COM18', baudrate=115200, timeout=1, debug=True)</p>
+<p>2. Set the direction of a GPIO pin to input (&quot;in&quot;) or output (&quot;out&quot;):
+gpio.setGpioDirection(1, 'out')</p>
+<p>3. Write a value of 0 or 1 to a GPIO pin:
+gpio.writeGpio(1, 1)</p>
+<p>4. Read the value of a GPIO pin:
+gpio.readGpio(1)</p>
+<p>5. Read the value of an analog input channel:
+gpio.readAnalog(1)</p>
+</div></blockquote>
+<p>Note: This library requires the PySerial package to be installed. You can install it with pip: <cite>pip install pyserial</cite>.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h3>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#myLibs.Numato32.NumatoGPIO" title="myLibs.Numato32.NumatoGPIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumatoGPIO</span></code></a></p></td>
+<td><p>A class for controlling Numato Lab GPIO and Analog Input/Output devices over serial.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">myLibs.Numato32.</span></span><span class="sig-name descname"><span class="pre">NumatoGPIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">115200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>A class for controlling Numato Lab GPIO and Analog Input/Output devices over serial.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>port (str): The name or number of the serial port to use.
+baudrate (int, optional): The baudrate of the serial connection. Defaults to 115200.
+timeout (float, optional): The timeout of the serial connection in seconds. Defaults to 1.
+debug (bool, optional): Whether to print debug messages. Defaults to False.</p>
+</dd>
+<dt>Attributes:</dt><dd><p>ser (serial.Serial): The serial connection object.
+debug (bool): Whether to print debug messages.</p>
+</dd>
+<dt>Methods:</dt><dd><p>__init__(self, port, baudrate=115200, timeout=1, debug=False): Initializes the NumatoGPIO object and opens the serial port.
+__del__(self): Closes the serial port.
+_class_print(self, message, raiseError=False): Prints a debug message or raises a ValueError if raiseError is True.
+_sendCommand(self, command): Sends a command to the Numato device and returns the response.
+_validateGpio(self, gpio): Validates a GPIO number and returns True if it is valid, False otherwise.
+_convertGPIO(self, gpio): Converts a GPIO number to a string or character.
+_calculateMask(self, gpio): Calculates the binary mask for a GPIO number.
+_calculateDirectionMaks(self, gpio, direction): Calculates the binary mask for a GPIO direction.
+setGpioDirection(self, gpio, direction): Sets the direction of a GPIO pin to input (&quot;in&quot;) or output (&quot;out&quot;).
+writeGpio(self, gpio, value): Writes a value of 0 or 1 to a GPIO pin.
+readGpio(self, gpio): Reads the value of a GPIO pin.
+_validateAnalog(self, channel): Validates an analog input channel and returns True if it is valid, False otherwise.
+readAnalog(self, channel): Reads the value of an analog input channel.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._GPIO_MAX_NUMERIC">
+<span class="sig-name descname"><span class="pre">_GPIO_MAX_NUMERIC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._GPIO_MAX_NUMERIC" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._GPIO_MIN">
+<span class="sig-name descname"><span class="pre">_GPIO_MIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._GPIO_MIN" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._GPIO_MAX">
+<span class="sig-name descname"><span class="pre">_GPIO_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></em><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._GPIO_MAX" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._ADC_MIN">
+<span class="sig-name descname"><span class="pre">_ADC_MIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._ADC_MIN" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._ADC_MAX">
+<span class="sig-name descname"><span class="pre">_ADC_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._ADC_MAX" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO.__del__">
+<span class="sig-name descname"><span class="pre">__del__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO.__del__" title="Permalink to this definition">#</a></dt>
+<dd><p>Destructs the object and performs any necessary cleanup before the object is deleted.
+This method is called by Python's garbage collector when there are no more references to the object.
+The purpose of this method is to release any resources held by the object, such as file handles or network connections.
+Note that it is not guaranteed that this method will be called, so it should not be relied upon to release
+critical resources. Instead, it's generally a good idea to use context managers or other techniques to manage
+resource cleanup explicitly.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._class_print">
+<span class="sig-name descname"><span class="pre">_class_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raiseError</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._class_print" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Prints a message with the name of the class as a prefix, if debug mode is enabled.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>message (str): The message to print.
+raiseError (bool): If True, raises a ValueError instead of printing the message.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If raiseError is True.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._sendCommand">
+<span class="sig-name descname"><span class="pre">_sendCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._sendCommand" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Sends a command to the device and waits for a response.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>command (str): The command to send to the device.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>bool or str: If the response from the device contains a &quot;&gt;&quot;, returns True, indicating the command was successful.</dt><dd><p>Otherwise, returns the response string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._validateGpio">
+<span class="sig-name descname"><span class="pre">_validateGpio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._validateGpio" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Validates the GPIO pin number provided by the user. Returns True if the GPIO pin number is valid, False otherwise.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>gpio (int or str): The GPIO pin number to be validated.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the GPIO pin number is valid, False otherwise.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._convertGPIO">
+<span class="sig-name descname"><span class="pre">_convertGPIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._convertGPIO" title="Permalink to this definition">#</a></dt>
+<dd><p>Converts the specified GPIO to its corresponding string representation.
+the Numato board accepts GPIO number from 0-9, and A-V (10-31), total 32 values.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>gpio (int): The GPIO to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The string representation of the GPIO.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._calculateMask">
+<span class="sig-name descname"><span class="pre">_calculateMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._calculateMask" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Calculate a hex mask for a given GPIO pin</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>gpio (int): The GPIO pin for which to calculate the mask. padded with zeroes to a length of 8 characters.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The hexadecimal mask for the given GPIO pin.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._calculateDirectionMaks">
+<span class="sig-name descname"><span class="pre">_calculateDirectionMaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._calculateDirectionMaks" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Calculate the direction mask for a specific GPIO pin.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>gpio (int): The GPIO pin number.
+direction (int): The direction to set. 1 for output and 0 for input.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: A string representing the direction mask in hexadecimal format, padded with zeroes to a length of 8 characters.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO.setGpioDirection">
+<span class="sig-name descname"><span class="pre">setGpioDirection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO.setGpioDirection" title="Permalink to this definition">#</a></dt>
+<dd><dl>
+<dt>Sets the direction of the specified GPIO pin.</dt><dd><dl>
+<dt>Args:</dt><dd><p>gpio (int): The GPIO pin number.</p>
+<p>direction (str): The direction to set the GPIO pin to. Must be &quot;in&quot; or &quot;out&quot;.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: Returns True if the GPIO direction was set successfully. Returns False if the GPIO pin number is invalid.</p>
+</dd>
+<dt>Example:</dt><dd><p>To set GPIO 0 to output, call setGpioDirection(0, &quot;out&quot;)
+To set GPIO 0 to input, call setGpioDirection(0, &quot;in&quot;)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO.writeGpio">
+<span class="sig-name descname"><span class="pre">writeGpio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO.writeGpio" title="Permalink to this definition">#</a></dt>
+<dd><dl>
+<dt>Sets the output value of a specified GPIO pin.</dt><dd><dl>
+<dt>Args:</dt><dd><p>gpio (int): The GPIO pin number to write to.</p>
+<p>value (int): The value to write to the specified GPIO pin. Must be 0 or 1.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the write was successful, False otherwise.</p>
+</dd>
+<dt>Example:</dt><dd><p>To write a high to GPIO 0, call writeGpio(0,1)
+To write a low to GPIO 0, call writeGpio(0,0)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO.readGpio">
+<span class="sig-name descname"><span class="pre">readGpio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO.readGpio" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Reads the value of a GPIO pin.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>gpio (int): The GPIO pin number to read.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The value of the GPIO pin (1 or 0).
+Bool: False if an invalid GPIO pin is provided.</p>
+</dd>
+<dt>Example:</dt><dd><p>To read the value of GPIO 0, call readGpio(0)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO._validateAnalog">
+<span class="sig-name descname"><span class="pre">_validateAnalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO._validateAnalog" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Validates an analog channel input and returns the channel number if valid.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>channel (int or str): The channel number to validate.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The channel number if it is a valid input.
+Bool: Returns False if the channel is invalid.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="myLibs.Numato32.NumatoGPIO.readAnalog">
+<span class="sig-name descname"><span class="pre">readAnalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#myLibs.Numato32.NumatoGPIO.readAnalog" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>Reads the analog value of the given channel.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>channel (int): The analog channel to read. Must be an integer between 1 and 7.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The analog value read from the channel.
+Bool: Returns False if the channel is invalid.</p>
+</dd>
+<dt>Example:</dt><dd><p>To read the value of AN1 (GPIO1), call readAnalog(1)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Mqtt/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.Mqtt</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../RN2483/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">myLibs.RN2483</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._GPIO_MAX_NUMERIC"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._GPIO_MAX_NUMERIC</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._GPIO_MIN"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._GPIO_MIN</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._GPIO_MAX"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._GPIO_MAX</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._ADC_MIN"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._ADC_MIN</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._ADC_MAX"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._ADC_MAX</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.__del__"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.__del__()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._class_print"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._class_print()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._sendCommand"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._sendCommand()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._validateGpio"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._validateGpio()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._convertGPIO"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._convertGPIO()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._calculateMask"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._calculateMask()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._calculateDirectionMaks"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._calculateDirectionMaks()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.setGpioDirection"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.setGpioDirection()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.writeGpio"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.writeGpio()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.readGpio"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.readGpio()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO._validateAnalog"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO._validateAnalog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#myLibs.Numato32.NumatoGPIO.readAnalog"><code class="docutils literal notranslate"><span class="pre">NumatoGPIO.readAnalog()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Thomas Kidd & Hunter Green
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Thomas Kidd &amp; Hunter Green.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

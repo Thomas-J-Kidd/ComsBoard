@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: myLibs
+Version: 0.0.1
+Summary: Useful python libraries
+Home-page: UNKNOWN
+Author: Carlos Finocchiaro
+Author-email: <carlosfinocchiaro@hotmail.com>
+License: UNKNOWN
+Keywords: python,myLibs
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+Useful python libraries
+
